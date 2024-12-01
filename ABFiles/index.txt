@@ -1,1 +1,1 @@
-// File: src/index.php
+// File: src/pages/index.php
