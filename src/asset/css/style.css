@@ -1,0 +1,295 @@
+/* asset/css/style.css */
+
+:root {
+    --primary-color: #ffc107;
+    --primary-dark: #ffa000;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    background: linear-gradient(45deg, rgba(255,193,7,0.1) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Features Section */
+.features-section {
+    padding: 60px 0;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255,193,7,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary-color);
+}
+
+/* Categories Section */
+.categories-nav {
+    padding: 40px 0;
+    background-color: var(--light-bg);
+}
+
+.category-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Why Us Section */
+.why-us-section {
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-title i {
+    color: #ffc107;
+    margin-left: 10px;
+}
+
+.benefits-list {
+    padding: 20px;
+}
+
+.benefit-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.benefit-item:hover {
+    transform: translateX(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-color: var(--primary-color);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    background: linear-gradient(45deg, #ffd700, #ffc107);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+}
+
+.benefit-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.benefit-content {
+    flex: 1;
+}
+
+.benefit-content h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.benefit-content p {
+    color: #666;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.why-us-image {
+    position: relative;
+    padding: 20px;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.image-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,193,7,0.1), rgba(255,255,255,0));
+    z-index: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 991px) {
+    .why-us-image {
+        margin-top: 40px;
+    }
+    
+    .benefit-item:hover {
+        transform: translateY(-5px);
+    }
+}
+.register-section {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.register-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.welcome-img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.register-header h2 {
+    color: #28a745;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.fun-label {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.fun-label i {
+    color: #28a745;
+    margin-left: 8px;
+}
+
+.fun-input {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.fun-input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.interest-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interest-buttons input[type="checkbox"] {
+    display: none;
+}
+
+.interest-btn {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.interest-btn i {
+    color: #28a745;
+}
+
+.interest-buttons input[type="checkbox"]:checked + .interest-btn {
+    background: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.interest-buttons input[type="checkbox"]:checked + .interest-btn i {
+    color: #fff;
+}
+
+.register-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #28a745, #20c997);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.2);
+}
+
+.register-btn i {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .register-card {
+        padding: 20px;
+    }
+    
+    .interest-buttons {
+        justify-content: center;
+    }
+}
