@@ -9,7 +9,7 @@
                 <h1>مرحباً بك في منصة المبرمج الصغير</h1>
                 <p class="lead">طور مهاراتك البرمجية وشارك في مشاريع حقيقية مع مجتمع من المبرمجين الصغار</p>
                 <div class="mt-4">
-                    <a href="<?php echo SITE_URL; ?>/register" class="btn btn-warning">سجل الآن</a>
+                    <a href="<?php echo SITE_URL; ?>/pages/register.php" class="btn btn-warning">سجل الآن</a>
                     <a href="#" class="btn btn-outline-warning ms-2">
                         <i class="fas fa-play-circle ms-1"></i>
                         شاهد فيديو
