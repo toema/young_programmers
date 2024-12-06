@@ -1,1 +1,0 @@
-// File: src/security/image_handler.php
