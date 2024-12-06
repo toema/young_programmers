@@ -1,0 +1,83 @@
+[06-Dec-2024 20:49:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getUserAvatar() in C:\xampp\htdocs\youngdev\src\pages\community\index.php:144
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\youngdev\src\pages\community\index.php on line 144
+[06-Dec-2024 20:49:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getUserAvatar() in C:\xampp\htdocs\youngdev\src\pages\community\index.php:144
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\youngdev\src\pages\community\index.php on line 144
+[06-Dec-2024 20:54:09 Europe/Berlin] Found 1 posts
+[06-Dec-2024 20:54:09 Europe/Berlin] SQL Query: SELECT p.*, u.username 
+                FROM posts p 
+                LEFT JOIN users u ON p.user_id = u.id 
+                WHERE 1=1 AND p.type = ? ORDER BY p.created_at DESC
+[06-Dec-2024 20:54:09 Europe/Berlin] Posts data: Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [user_id] => 43
+            [title] => شيصيصيصصصصصصصصصصصصصصصصصصصصصص
+            [content] => يصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصص
+            [type] => question
+            [status] => active
+            [created_at] => 2024-12-06 21:42:50
+            [username] => adam@youngdev.com
+        )
+
+)
+
+[06-Dec-2024 20:54:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getUserAvatar() in C:\xampp\htdocs\youngdev\src\pages\community\index.php:101
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\youngdev\src\pages\community\index.php on line 101
+[06-Dec-2024 20:54:10 Europe/Berlin] Found 1 posts
+[06-Dec-2024 20:54:10 Europe/Berlin] SQL Query: SELECT p.*, u.username 
+                FROM posts p 
+                LEFT JOIN users u ON p.user_id = u.id 
+                WHERE 1=1 ORDER BY p.created_at DESC
+[06-Dec-2024 20:54:10 Europe/Berlin] Posts data: Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [user_id] => 43
+            [title] => شيصيصيصصصصصصصصصصصصصصصصصصصصصص
+            [content] => يصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصص
+            [type] => question
+            [status] => active
+            [created_at] => 2024-12-06 21:42:50
+            [username] => adam@youngdev.com
+        )
+
+)
+
+[06-Dec-2024 20:54:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getUserAvatar() in C:\xampp\htdocs\youngdev\src\pages\community\index.php:101
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\youngdev\src\pages\community\index.php on line 101
+[06-Dec-2024 20:54:10 Europe/Berlin] Found 1 posts
+[06-Dec-2024 20:54:10 Europe/Berlin] SQL Query: SELECT p.*, u.username 
+                FROM posts p 
+                LEFT JOIN users u ON p.user_id = u.id 
+                WHERE 1=1 AND p.type = ? ORDER BY p.created_at DESC
+[06-Dec-2024 20:54:10 Europe/Berlin] Posts data: Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [user_id] => 43
+            [title] => شيصيصيصصصصصصصصصصصصصصصصصصصصصص
+            [content] => يصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصصص
+            [type] => question
+            [status] => active
+            [created_at] => 2024-12-06 21:42:50
+            [username] => adam@youngdev.com
+        )
+
+)
+
+[06-Dec-2024 20:54:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getUserAvatar() in C:\xampp\htdocs\youngdev\src\pages\community\index.php:101
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\youngdev\src\pages\community\index.php on line 101

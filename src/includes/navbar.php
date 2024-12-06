@@ -3,25 +3,45 @@
         <a class="navbar-brand" href="<?php echo SITE_URL; ?>">
             <?php echo SITE_NAME; ?>
         </a>
-
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo SITE_URL; ?>">الرئيسية</a>
                 </li>
+                
+                <?php if(isLoggedIn()): ?>
+                <!-- رابط المجتمع للمستخدمين المسجلين فقط -->
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo SITE_URL; ?>/pages/community">
+                        <i class="fas fa-comments"></i>
+                        المجتمع
+                    </a>
+                </li>
+                
+                <!-- رابط إضافة مشروع للأطفال فقط -->
+                <?php if($_SESSION['user_type'] === 'child'): ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo SITE_URL; ?>/pages/add-project.php">
+                        <i class="fas fa-plus-circle"></i>
+                        إضافة مشروع
+                    </a>
+                </li>
+                <?php endif; ?>
+                <?php endif; ?>
             </ul>
-
+            
             <ul class="navbar-nav">
                 <?php if(isLoggedIn()): ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <img src="<?php echo !empty($_SESSION['profile_image']) ? UPLOAD_URL . $_SESSION['profile_image'] : SITE_URL . '/assets/images/default-avatar.png'; ?>" 
-                                 class="rounded-circle me-1" 
-                                 width="24" 
+                            <img src="<?php echo !empty($_SESSION['profile_image']) ? UPLOAD_URL . $_SESSION['profile_image'] : SITE_URL . '/assets/images/default-avatar.png'; ?>"
+                                 class="rounded-circle me-1"
+                                 width="24"
                                  height="24">
                             <?php echo $_SESSION['username']; ?>
                         </a>
@@ -78,5 +98,19 @@
     width: 20px;
     text-align: center;
     margin-left: 0.5rem;
+}
+
+/* إضافة تنسيقات جديدة */
+.nav-link i {
+    margin-left: 0.3rem;
+}
+
+.navbar .nav-link:hover {
+    color: var(--bs-primary);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+    font-weight: 500;
 }
 </style>

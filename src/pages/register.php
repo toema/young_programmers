@@ -22,10 +22,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // التحقق من العمر
 // في جزء التحقق من العمر في PHP
-if($type == 'child' && ($age < 13 || $age > 18)) {
-    throw new Exception("العمر يجب أن يكون بين 13 و 18 سنة للأطفال");
-}
-if($type == 'parent' && $age < 21) {
+// التحقق من العمر
+if($type == 'child') {
+    if($age < 10) {
+        throw new Exception("العمر يجب أن يكون 10 سنوات على الأقل");
+    } else if($age > 18) {
+        throw new Exception("العمر يجب أن يكون أقل من 18 سنة للأطفال");
+    }
+} else if($type == 'parent' && $age < 21) {
     throw new Exception("يجب أن يكون عمر ولي الأمر 21 سنة على الأقل");
 }
 
@@ -149,19 +153,25 @@ require_once '../includes/header.php';
                             </div>
                             <div class="mb-3">
     <label class="form-label">تاريخ الميلاد</label>
-    <input type="date" 
-           class="form-control" 
-           name="birthdate" 
+    <input type="date"
+           class="form-control"
+           name="birthdate"
            required
-           max="<?php echo date('Y-m-d', strtotime('-13 years')); ?>">
+           <?php if(isset($_GET['parent_id'])): ?>
+               max="<?php echo date('Y-m-d', strtotime('-10 years')); ?>"
+               min="<?php echo date('Y-m-d', strtotime('-18 years')); ?>"
+           <?php else: ?>
+               max="<?php echo date('Y-m-d', strtotime('-21 years')); ?>"
+           <?php endif; ?>>
     <small class="text-muted age-helper">
         <?php if(isset($_GET['parent_id'])): ?>
-            يجب أن يكون عمرك 13 سنة على الأقل
+            العمر المسموح به من 10 إلى 18 سنة
         <?php else: ?>
             يجب أن يكون عمرك 21 سنة على الأقل لولي الأمر
         <?php endif; ?>
     </small>
 </div>
+
 
 
 
