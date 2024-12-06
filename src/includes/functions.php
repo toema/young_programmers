@@ -388,39 +388,49 @@ function getAllPosts($type = null, $sort = 'latest') {
     global $conn;
     
     try {
+        // طباعة للتشخيص
+        error_log("Getting posts with type: " . $type);
+        
+        // الاستعلام الأساسي
         $sql = "SELECT p.*, u.username 
                 FROM posts p 
-                LEFT JOIN users u ON p.user_id = u.id 
-                WHERE 1=1";
+                JOIN users u ON p.user_id = u.id";
         
-        $params = [];
-        
-        // إضافة فلتر النوع
-        if($type && $type !== 'all') {
-            $sql .= " AND p.type = ?";
-            $params[] = $type;
+        // إضافة شرط النوع
+        if($type && $type != 'all') {
+            $sql .= " WHERE p.type = :type";
+            $params[':type'] = $type;
         }
         
         // إضافة الترتيب
         $sql .= " ORDER BY p.created_at DESC";
         
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($params);
+        // طباعة الاستعلام للتشخيص
+        error_log("SQL Query: " . $sql);
         
+        // تنفيذ الاستعلام
+        $stmt = $conn->prepare($sql);
+        
+        // ربط المعاملات إذا وجدت
+        if(!empty($params)) {
+            foreach($params as $key => &$val) {
+                $stmt->bindValue($key, $val);
+            }
+        }
+        
+        $stmt->execute();
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        // تسجيل للتأكد
+        // طباعة النتائج للتشخيص
         error_log("Found " . count($posts) . " posts");
-        error_log("SQL Query: " . $sql);
-        error_log("Posts data: " . print_r($posts, true));
         
         return $posts;
+        
     } catch(PDOException $e) {
         error_log("Error in getAllPosts: " . $e->getMessage());
         return [];
     }
 }
-
 // دالة إضافة منشور
 function addPost($data) {
     global $conn;
