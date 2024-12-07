@@ -99,3 +99,134 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\youngdev\src\pages\community\index.php on line 101
+[07-Dec-2024 06:04:55 UTC] Database Connection Error: SQLSTATE[HY000] [2002] No such file or directory
+[07-Dec-2024 06:08:12 UTC] Database Connection Error: SQLSTATE[HY000] [2002] No such file or directory
+[07-Dec-2024 06:11:08 UTC] Database Connection Error: SQLSTATE[HY000] [2002] No such file or directory
+[07-Dec-2024 06:11:10 UTC] Database Connection Error: SQLSTATE[HY000] [2002] No such file or directory
+[07-Dec-2024 06:11:16 UTC] Database Connection Error: SQLSTATE[HY000] [2002] No such file or directory
+[07-Dec-2024 06:16:59 UTC] Database Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'user'@'172.18.0.2' (using password: YES)
+[07-Dec-2024 06:20:47 UTC] Database Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'user'@'172.18.0.3' (using password: YES)
+[07-Dec-2024 06:24:09 UTC] Database Connection Error: SQLSTATE[HY000] [1045] Access denied for user 'user'@'172.18.0.3' (using password: YES)
+[07-Dec-2024 06:26:09 UTC] Missing required table: users
+[07-Dec-2024 06:26:09 UTC] Missing required table: posts
+[07-Dec-2024 06:26:09 UTC] Missing required table: comments
+[07-Dec-2024 06:26:09 UTC] Missing required table: reactions
+[07-Dec-2024 06:26:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/includes/functions.php on line 291
+[07-Dec-2024 06:38:06 UTC] Missing required table: users
+[07-Dec-2024 06:38:06 UTC] Missing required table: posts
+[07-Dec-2024 06:38:06 UTC] Missing required table: comments
+[07-Dec-2024 06:38:06 UTC] Missing required table: reactions
+[07-Dec-2024 06:38:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/includes/functions.php on line 291
+[07-Dec-2024 06:54:06 UTC] Missing required table: comments
+[07-Dec-2024 06:54:06 UTC] Missing required table: reactions
+[07-Dec-2024 06:55:10 UTC] Missing required table: comments
+[07-Dec-2024 06:55:10 UTC] Missing required table: reactions
+[07-Dec-2024 06:57:43 UTC] Missing required table: comments
+[07-Dec-2024 06:57:43 UTC] Missing required table: reactions
+[07-Dec-2024 06:59:11 UTC] Missing required table: comments
+[07-Dec-2024 06:59:11 UTC] Missing required table: reactions
+[07-Dec-2024 07:03:12 UTC] Database Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+[07-Dec-2024 07:04:20 UTC] Missing required table: users
+[07-Dec-2024 07:04:20 UTC] Missing required table: posts
+[07-Dec-2024 07:04:20 UTC] Missing required table: comments
+[07-Dec-2024 07:04:20 UTC] Missing required table: reactions
+[07-Dec-2024 07:04:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/includes/functions.php on line 291
+[07-Dec-2024 07:08:21 UTC] Database Connection Error: SQLSTATE[HY000] [2002] Connection refused
+[07-Dec-2024 07:17:49 UTC] Missing required table: users
+[07-Dec-2024 07:17:49 UTC] Missing required table: posts
+[07-Dec-2024 07:17:49 UTC] Missing required table: comments
+[07-Dec-2024 07:17:49 UTC] Missing required table: reactions
+[07-Dec-2024 07:17:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/includes/functions.php on line 291
+[07-Dec-2024 07:21:46 UTC] Missing required table: users
+[07-Dec-2024 07:21:46 UTC] Missing required table: posts
+[07-Dec-2024 07:21:46 UTC] Missing required table: comments
+[07-Dec-2024 07:21:46 UTC] Missing required table: reactions
+[07-Dec-2024 07:21:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/includes/functions.php on line 291
+[07-Dec-2024 12:40:33 UTC] Missing required table: users
+[07-Dec-2024 12:40:33 UTC] Missing required table: posts
+[07-Dec-2024 12:40:33 UTC] Missing required table: comments
+[07-Dec-2024 12:40:33 UTC] Missing required table: reactions
+[07-Dec-2024 12:40:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/includes/functions.php on line 291
+[07-Dec-2024 12:47:50 UTC] Missing required table: users
+[07-Dec-2024 12:47:50 UTC] Missing required table: posts
+[07-Dec-2024 12:47:50 UTC] Missing required table: comments
+[07-Dec-2024 12:47:50 UTC] Missing required table: reactions
+[07-Dec-2024 12:47:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/youngdev/src/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/youngdev/src/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/youngdev/src/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/youngdev/src/includes/functions.php on line 291
+[07-Dec-2024 14:44:03 UTC] Missing required table: users
+[07-Dec-2024 14:44:03 UTC] Missing required table: posts
+[07-Dec-2024 14:44:03 UTC] Missing required table: comments
+[07-Dec-2024 14:44:03 UTC] Missing required table: reactions
+[07-Dec-2024 14:44:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/src/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/src/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/src/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/src/includes/functions.php on line 291
+[07-Dec-2024 14:44:05 UTC] Missing required table: users
+[07-Dec-2024 14:44:05 UTC] Missing required table: posts
+[07-Dec-2024 14:44:05 UTC] Missing required table: comments
+[07-Dec-2024 14:44:05 UTC] Missing required table: reactions
+[07-Dec-2024 14:44:07 UTC] Missing required table: users
+[07-Dec-2024 14:44:07 UTC] Missing required table: posts
+[07-Dec-2024 14:44:07 UTC] Missing required table: comments
+[07-Dec-2024 14:44:07 UTC] Missing required table: reactions
+[07-Dec-2024 14:44:10 UTC] Missing required table: users
+[07-Dec-2024 14:44:10 UTC] Missing required table: posts
+[07-Dec-2024 14:44:10 UTC] Missing required table: comments
+[07-Dec-2024 14:44:10 UTC] Missing required table: reactions
+[07-Dec-2024 14:44:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'youngdev.settings_admin' doesn't exist in /var/www/html/src/includes/functions.php:291
+Stack trace:
+#0 /var/www/html/src/includes/functions.php(291): PDO->prepare('SELECT setting_...')
+#1 /var/www/html/src/index.php(6): getAdminSetting('site_title')
+#2 {main}
+  thrown in /var/www/html/src/includes/functions.php on line 291
+[07-Dec-2024 14:45:15 UTC] Missing required table: comments
+[07-Dec-2024 14:45:15 UTC] Missing required table: reactions
+[07-Dec-2024 14:45:51 UTC] Missing required table: comments
+[07-Dec-2024 14:45:51 UTC] Missing required table: reactions
+[07-Dec-2024 14:45:52 UTC] Missing required table: comments
+[07-Dec-2024 14:45:52 UTC] Missing required table: reactions
+[07-Dec-2024 14:46:23 UTC] Missing required table: comments
+[07-Dec-2024 14:46:23 UTC] Missing required table: reactions
+[07-Dec-2024 14:53:48 UTC] Missing required table: comments
+[07-Dec-2024 14:53:48 UTC] Missing required table: reactions
+[07-Dec-2024 15:02:08 UTC] Getting posts with type: all
+[07-Dec-2024 15:02:08 UTC] SQL Query: SELECT p.*, u.username 
+                FROM posts p 
+                JOIN users u ON p.user_id = u.id ORDER BY p.created_at DESC
+[07-Dec-2024 15:02:08 UTC] Found 0 posts

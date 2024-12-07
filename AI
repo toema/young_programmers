@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir -p ABFiles
-rm -rf ABFiles/*
+mkdir -p ai_files
+rm -rf ai_files/*
 
 declare -A file_counts
 
@@ -12,10 +12,10 @@ copy_file() {
 
     if [[ -v "file_counts[$base_name]" ]]; then
         file_counts[$base_name]=$((file_counts[$base_name] + 1))
-        dest_file="ABFiles/${base_name}_${file_counts[$base_name]}.txt"
+        dest_file="ai_files/${base_name}_${file_counts[$base_name]}.txt"
     else
         file_counts[$base_name]=1
-        dest_file="ABFiles/${base_name}.txt"
+        dest_file="ai_files/${base_name}.txt"
     fi
 
     # Add the path comment at the beginning of the new file
@@ -33,9 +33,9 @@ if [ -f "./prisma/schema.prisma" ]; then
     copy_file "./prisma/schema.prisma"
 fi
 
-git add ABFiles
+git add ai_files
 
-echo "Files copied from src to ABFiles, paths added as comments, and extensions changed to .txt"
+echo "Files copied from src to ai_files, paths added as comments, and extensions changed to .txt"
 echo "prisma/schema.prisma has been included if it exists"
 echo "Files with the same name have been numbered to avoid conflicts"
 
