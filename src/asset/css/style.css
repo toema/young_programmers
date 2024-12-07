@@ -80,3 +80,74 @@ footer a:hover {
 .social-links a:hover {
     color: #ffc107;
 }
+/* تنسيقات المجتمع */
+.post-card {
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-actions button {
+    transition: all 0.3s ease;
+}
+
+.post-actions button:hover {
+    transform: scale(1.05);
+}
+
+.post-actions button.active {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.comment {
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.comment:hover {
+    background-color: #e9ecef;
+}
+
+.comments-section {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.add-comment-form input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.add-comment-form button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* تنسيقات الأزرار */
+.btn-outline-primary.active {
+    color: white !important;
+}
+
+/* تنسيقات التصفية */
+.filter-buttons .btn {
+    margin-right: 0.5rem;
+}
+
+/* تحسينات للموبايل */
+@media (max-width: 768px) {
+    .post-actions {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}

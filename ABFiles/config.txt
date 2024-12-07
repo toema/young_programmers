@@ -1,36 +1,39 @@
 // File: src/includes/config.php
 <?php
-// Database Configuration
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'youngdev');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-
-// Site Configuration
-define('SITE_URL', 'http://localhost/youngdev/src');
-define('SITE_NAME', 'المبرمج الصغير');
-
-// Start Session
 session_start();
 
-// Database Connection
+// معلومات قاعدة البيانات
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'youngdev');
+
+// معلومات الموقع
+define('SITE_NAME', 'مبرمج الصغير|YoungDev');
+define('SITE_URL', 'http://localhost/youngdev/src');
+
+// مسارات رفع الملفات
+define('UPLOAD_PATH', __DIR__ . '/../uploads/profiles/');
+define('UPLOAD_URL', SITE_URL . '/uploads/profiles/');
+// ثوابت إضافية للمجتمع
+define('MAX_POST_LENGTH', 1000);
+define('MIN_POST_LENGTH', 10);
+define('MAX_COMMENT_LENGTH', 500);
+define('MIN_COMMENT_LENGTH', 2);
+
+// الاتصال بقاعدة البيانات
 try {
-    $conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=utf8mb4", DB_USER, DB_PASS);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO(
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
+        DB_USER,
+        DB_PASS,
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]
+    );
 } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-    exit;
+    die("خطأ في الاتصال بقاعدة البيانات: " . $e->getMessage());
 }
 
-// Helper Functions
-function cleanInput($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-function isLoggedIn() {
-    return isset($_SESSION['user_id']);
-}
-?>
+require_once 'functions.php';
