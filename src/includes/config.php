@@ -8,14 +8,14 @@ ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/error.log');
 
 // معلومات قاعدة البيانات
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'db');
+define('DB_USER', 'user');
+define('DB_PASS', 'root');
 define('DB_NAME', 'youngdev');
 
 // معلومات الموقع
 define('SITE_NAME', 'مبرمج الصغير|YoungDev');
-define('SITE_URL', 'http://localhost/youngdev/src');
+define('SITE_URL', 'http://localhost:81/src');
 
 // مسارات رفع الملفات
 define('UPLOAD_PATH', __DIR__ . '/../uploads/profiles/');
